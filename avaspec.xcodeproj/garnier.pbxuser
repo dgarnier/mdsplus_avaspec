@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	0859FB1408563EE5003114E3 /* PBXBookmarkGroup */ = {
+		isa = PBXBookmarkGroup;
+		children = (
+			0859FB76085756F4003114E3 /* PBXBookmark */,
+		);
+		name = Root;
+	};
+	0859FB76085756F4003114E3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+	};
+	0859FB78085756FC003114E3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+	};
+	0859FBE008578E45003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: request for member 'plot_xy' in 'g', which is of non-class type 'gnuplot::gnuplot ()()'";
+		fRef = 085E77CC0854B96C00A743C6 /* main.cpp */;
+		rLen = 1;
+		rLoc = 158;
+		rType = 1;
+	};
+	0859FBE208578E45003114E3 /* main.cpp:123 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 085E77CC0854B96C00A743C6 /* main.cpp */;
+		functionName = "main()";
+		hitCount = 0;
+		lineNumber = 123;
+		modificationTime = 139960257.757848;
+		state = 2;
+	};
+	0859FBFC08579627003114E3 /* main.cpp:36 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 085E77CC0854B96C00A743C6 /* main.cpp */;
+		functionName = "dynamic_spectrum()";
+		hitCount = 0;
+		lineNumber = 36;
+		modificationTime = 139957799.718328;
+		state = 1;
+	};
+	0859FC040857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D50854B96C00A743C6 /* gnuplot_i.cpp */;
+		name = "gnuplot_i.cpp: 202";
+		rLen = 5871;
+		rLoc = 4343;
+		rType = 0;
+		vrLen = 692;
+		vrLoc = 9526;
+	};
+	0859FC060857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77CC0854B96C00A743C6 /* main.cpp */;
+		name = "main.cpp: 9";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 927;
+		vrLoc = 0;
+	};
+	0859FC070857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+		name = "gnuplot.hpp: ~Gnuplot";
+		rLen = 0;
+		rLoc = 8213;
+		rType = 0;
+		vrLen = 1071;
+		vrLoc = 2264;
+	};
+	0859FC080857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D50854B96C00A743C6 /* gnuplot_i.cpp */;
+		name = "gnuplot_i.cpp: 70";
+		rLen = 375;
+		rLoc = 1580;
+		rType = 0;
+		vrLen = 828;
+		vrLoc = 1301;
+	};
+	0859FC090857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+		name = "gnuplot.hpp: set_ylabel";
+		rLen = 0;
+		rLoc = 3603;
+		rType = 0;
+		vrLen = 1160;
+		vrLoc = 1830;
+	};
+	0859FC0A0857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D50854B96C00A743C6 /* gnuplot_i.cpp */;
+		name = "gnuplot_i.cpp: 37";
+		rLen = 716;
+		rLoc = 812;
+		rType = 0;
+		vrLen = 946;
+		vrLoc = 1048;
+	};
+	0859FC0B0857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+		name = "gnuplot.hpp: 92";
+		rLen = 0;
+		rLoc = 2477;
+		rType = 0;
+		vrLen = 1104;
+		vrLoc = 2377;
+	};
+	0859FC0C0857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D50854B96C00A743C6 /* gnuplot_i.cpp */;
+		name = "gnuplot_i.cpp: 114";
+		rLen = 0;
+		rLoc = 2619;
+		rType = 0;
+		vrLen = 1034;
+		vrLoc = 1911;
+	};
+	0859FC0D0857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+		name = "gnuplot.hpp: 103";
+		rLen = 0;
+		rLoc = 2382;
+		rType = 0;
+		vrLen = 1224;
+		vrLoc = 2450;
+	};
+	0859FC0E0857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D50854B96C00A743C6 /* gnuplot_i.cpp */;
+		name = "gnuplot_i.cpp: 131";
+		rLen = 357;
+		rLoc = 2949;
+		rType = 0;
+		vrLen = 930;
+		vrLoc = 2753;
+	};
+	0859FC0F0857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+		name = "gnuplot.hpp: 60";
+		rLen = 0;
+		rLoc = 1424;
+		rType = 0;
+		vrLen = 1156;
+		vrLoc = 1134;
+	};
+	0859FC100857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D50854B96C00A743C6 /* gnuplot_i.cpp */;
+		name = "gnuplot_i.cpp: 202";
+		rLen = 5871;
+		rLoc = 4343;
+		rType = 0;
+		vrLen = 692;
+		vrLoc = 9526;
+	};
+	0859FC190857984D003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC1A0857984D003114E3 /* stdexcept */;
+		rLen = 0;
+		rLoc = 2147483647;
+		rType = 0;
+	};
+	0859FC1A0857984D003114E3 /* stdexcept */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.h;
+		name = stdexcept;
+		path = "/usr/include/gcc/darwin/4.0/c++/stdexcept";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {784, 2072}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {784, 800}}";
+			sepNavWindowFrame = "{{295, 26}, {823, 929}}";
+		};
+	};
+	0859FC5F08579FB8003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+		name = "gnuplot.hpp: 366";
+		rLen = 0;
+		rLoc = 8212;
+		rType = 0;
+		vrLen = 916;
+		vrLoc = 136;
+	};
+	0859FC6108579FB8003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC6208579FB8003114E3 /* stl_algobase.h */;
+		name = copy;
+		rLen = 4;
+		rLoc = 12394;
+		rType = 0;
+		vrLen = 1630;
+		vrLoc = 11774;
+	};
+	0859FC6208579FB8003114E3 /* stl_algobase.h */ = {
+		isa = PBXFileReference;
+		name = stl_algobase.h;
+		path = "/usr/include/gcc/darwin/4.0/c++/bits/stl_algobase.h";
+		sourceTree = "<absolute>";
+	};
+	0859FC6308579FB8003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC6408579FB8003114E3 /* algorithm */;
+		name = "(null): 68";
+		rLen = 0;
+		rLoc = 2778;
+		rType = 0;
+		vrLen = 1407;
+		vrLoc = 1411;
+	};
+	0859FC6408579FB8003114E3 /* algorithm */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.h;
+		name = algorithm;
+		path = "/usr/include/gcc/darwin/4.0/c++/algorithm";
+		sourceTree = "<absolute>";
+	};
+	0859FC6608579FB8003114E3 /* stl_algo.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = stl_algo.h;
+		path = "/usr/include/gcc/darwin/4.0/c++/bits/stl_algo.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1027, 72324}}";
+			sepNavSelRange = "{26871, 9}";
+			sepNavVisRect = "{{0, 11084}, {1027, 600}}";
+		};
+	};
+	0859FC6708579FB8003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+		name = "gnuplot.hpp: 366";
+		rLen = 0;
+		rLoc = 8212;
+		rType = 0;
+		vrLen = 916;
+		vrLoc = 136;
+	};
+	0859FC6808579FB8003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77CC0854B96C00A743C6 /* main.cpp */;
+		name = "main.cpp: 6";
+		rLen = 0;
+		rLoc = 119;
+		rType = 0;
+		vrLen = 933;
+		vrLoc = 0;
+	};
+	0859FC6908579FB8003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC6A08579FB8003114E3 /* algorithm */;
+		name = "(null): 65";
+		rLen = 0;
+		rLoc = 2683;
+		rType = 0;
+		vrLen = 1407;
+		vrLoc = 1411;
+	};
+	0859FC6A08579FB8003114E3 /* algorithm */ = {
+		isa = PBXFileReference;
+		name = algorithm;
+		path = "/usr/include/gcc/darwin/4.0/c++/algorithm";
+		sourceTree = "<absolute>";
+	};
+	0859FC6B08579FB8003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC6C08579FB8003114E3 /* stl_algobase.h */;
+		name = copy;
+		rLen = 4;
+		rLoc = 12394;
+		rType = 0;
+		vrLen = 1630;
+		vrLoc = 11774;
+	};
+	0859FC6C08579FB8003114E3 /* stl_algobase.h */ = {
+		isa = PBXFileReference;
+		name = stl_algobase.h;
+		path = "/usr/include/gcc/darwin/4.0/c++/bits/stl_algobase.h";
+		sourceTree = "<absolute>";
+	};
+	0859FC6D08579FB8003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC6E08579FB8003114E3 /* algorithm */;
+		name = "(null): 68";
+		rLen = 0;
+		rLoc = 2778;
+		rType = 0;
+		vrLen = 1407;
+		vrLoc = 1411;
+	};
+	0859FC6E08579FB8003114E3 /* algorithm */ = {
+		isa = PBXFileReference;
+		name = algorithm;
+		path = "/usr/include/gcc/darwin/4.0/c++/algorithm";
+		sourceTree = "<absolute>";
+	};
+	0859FC7308579FB8003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC7408579FB8003114E3 /* functional */;
+		rLen = 0;
+		rLoc = 2147483647;
+		rType = 0;
+	};
+	0859FC7408579FB8003114E3 /* functional */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.h;
+		name = functional;
+		path = "/usr/include/gcc/darwin/4.0/c++/functional";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {784, 812}}";
+			sepNavSelRange = "{2181, 0}";
+			sepNavVisRect = "{{0, 12}, {784, 800}}";
+			sepNavWindowFrame = "{{303, 73}, {823, 929}}";
+		};
+	};
+	0859FC8F0857A240003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC6608579FB8003114E3 /* stl_algo.h */;
+		name = transform;
+		rLen = 9;
+		rLoc = 26871;
+		rType = 0;
+		vrLen = 1858;
+		vrLoc = 25995;
+	};
+	0859FC900857A240003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'class gnuplot::gnuplot' has no member named 'set_xtitle'";
+		fRef = 085E77CC0854B96C00A743C6 /* main.cpp */;
+		rLen = 1;
+		rLoc = 156;
+		rType = 1;
+	};
+	0859FC910857A240003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC6608579FB8003114E3 /* stl_algo.h */;
+		name = transform;
+		rLen = 9;
+		rLoc = 26871;
+		rType = 0;
+		vrLen = 1858;
+		vrLoc = 25995;
+	};
+	0859FC970857A240003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77CC0854B96C00A743C6 /* main.cpp */;
+		name = "g.set_xtitle(xtitle);";
+		rLen = 24;
+		rLoc = 3765;
+		rType = 0;
+		vrLen = 936;
+		vrLoc = 3186;
+	};
+	0859FC980857A240003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77CC0854B96C00A743C6 /* main.cpp */;
+		name = "main.cpp: 162";
+		rLen = 0;
+		rLoc = 3924;
+		rType = 0;
+		vrLen = 1396;
+		vrLoc = 2726;
+	};
+	0859FC990857A240003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC9A0857A240003114E3 /* functional */;
+		name = "(null): 55";
+		rLen = 0;
+		rLoc = 2181;
+		rType = 0;
+		vrLen = 2226;
+		vrLoc = 0;
+	};
+	0859FC9A0857A240003114E3 /* functional */ = {
+		isa = PBXFileReference;
+		name = functional;
+		path = "/usr/include/gcc/darwin/4.0/c++/functional";
+		sourceTree = "<absolute>";
+	};
+	0859FC9B0857A240003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0859FC9C0857A240003114E3 /* stdexcept */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2071;
+		vrLoc = 0;
+	};
+	0859FC9C0857A240003114E3 /* stdexcept */ = {
+		isa = PBXFileReference;
+		name = stdexcept;
+		path = "/usr/include/gcc/darwin/4.0/c++/stdexcept";
+		sourceTree = "<absolute>";
+	};
+	0859FC9D0857A240003114E3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */;
+		name = "gnuplot.hpp: 366";
+		rLen = 0;
+		rLoc = 8213;
+		rType = 0;
+		vrLen = 1312;
+		vrLoc = 729;
+	};
+	085E77BE0854B8EE00A743C6 /* avaspec */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		configStateDict = {
+		};
+		cppStopOnCatchEnabled = 0;
+		cppStopOnThrowEnabled = 0;
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+			{
+				active = YES;
+				name = PATH;
+				value = "/usr/local/bin:/sw/bin:/usr/bin:/usr/sbin:/bin";
+			},
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = avaspec;
+		sourceDirectories = (
+		);
+	};
+	085E77C50854B8F600A743C6 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	085E77C60854B8F600A743C6 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	085E77CC0854B96C00A743C6 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {784, 2478}}";
+			sepNavSelRange = "{3924, 0}";
+			sepNavVisRect = "{{0, 1650}, {784, 800}}";
+			sepNavWindowFrame = "{{332, -332}, {823, 929}}";
+		};
+	};
+	085E77D10854B96C00A743C6 /* gnuplot.hpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {784, 5194}}";
+			sepNavSelRange = "{8213, 0}";
+			sepNavVisRect = "{{0, 429}, {784, 800}}";
+			sepNavWindowFrame = "{{303, -33}, {823, 929}}";
+		};
+	};
+	085E77D40854B96C00A743C6 /* avaspec.hpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {784, 3164}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 21}, {784, 800}}";
+			sepNavWindowFrame = "{{15, 68}, {823, 929}}";
+		};
+	};
+	085E77D50854B96C00A743C6 /* gnuplot_i.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1027, 7070}}";
+			sepNavSelRange = "{4343, 5871}";
+			sepNavVisRect = "{{0, 6470}, {1027, 600}}";
+			sepNavWindowFrame = "{{335, 47}, {823, 929}}";
+		};
+	};
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Deployment;
+		activeBuildStyle = 014CEA460018CE2711CA2923 /* Development */;
+		activeExecutable = 085E77BE0854B8EE00A743C6 /* avaspec */;
+		activeTarget = 8DD76F620486A84900D96B5E /* avaspec */;
+		addToTargets = (
+			8DD76F620486A84900D96B5E /* avaspec */,
+		);
+		breakpoints = (
+			0859FBE208578E45003114E3 /* main.cpp:123 */,
+			0859FBFC08579627003114E3 /* main.cpp:36 */,
+		);
+		codeSenseManager = 085E77C60854B8F600A743C6 /* Code sense */;
+		executables = (
+			085E77BE0854B8EE00A743C6 /* avaspec */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					489,
+					200,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					131,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					829,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					649,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 139869926;
+			PBXWorkspaceStateSaveDate = 139869926;
+		};
+		perUserProjectItems = {
+			0859FB78085756FC003114E3 /* PBXBookmark */ = 0859FB78085756FC003114E3 /* PBXBookmark */;
+			0859FBE008578E45003114E3 /* PBXTextBookmark */ = 0859FBE008578E45003114E3 /* PBXTextBookmark */;
+			0859FC040857984D003114E3 /* PBXTextBookmark */ = 0859FC040857984D003114E3 /* PBXTextBookmark */;
+			0859FC060857984D003114E3 /* PBXTextBookmark */ = 0859FC060857984D003114E3 /* PBXTextBookmark */;
+			0859FC070857984D003114E3 /* PBXTextBookmark */ = 0859FC070857984D003114E3 /* PBXTextBookmark */;
+			0859FC080857984D003114E3 /* PBXTextBookmark */ = 0859FC080857984D003114E3 /* PBXTextBookmark */;
+			0859FC090857984D003114E3 /* PBXTextBookmark */ = 0859FC090857984D003114E3 /* PBXTextBookmark */;
+			0859FC0A0857984D003114E3 /* PBXTextBookmark */ = 0859FC0A0857984D003114E3 /* PBXTextBookmark */;
+			0859FC0B0857984D003114E3 /* PBXTextBookmark */ = 0859FC0B0857984D003114E3 /* PBXTextBookmark */;
+			0859FC0C0857984D003114E3 /* PBXTextBookmark */ = 0859FC0C0857984D003114E3 /* PBXTextBookmark */;
+			0859FC0D0857984D003114E3 /* PBXTextBookmark */ = 0859FC0D0857984D003114E3 /* PBXTextBookmark */;
+			0859FC0E0857984D003114E3 /* PBXTextBookmark */ = 0859FC0E0857984D003114E3 /* PBXTextBookmark */;
+			0859FC0F0857984D003114E3 /* PBXTextBookmark */ = 0859FC0F0857984D003114E3 /* PBXTextBookmark */;
+			0859FC100857984D003114E3 /* PBXTextBookmark */ = 0859FC100857984D003114E3 /* PBXTextBookmark */;
+			0859FC190857984D003114E3 /* PBXTextBookmark */ = 0859FC190857984D003114E3 /* PBXTextBookmark */;
+			0859FC5F08579FB8003114E3 /* PBXTextBookmark */ = 0859FC5F08579FB8003114E3 /* PBXTextBookmark */;
+			0859FC6108579FB8003114E3 /* PBXTextBookmark */ = 0859FC6108579FB8003114E3 /* PBXTextBookmark */;
+			0859FC6308579FB8003114E3 /* PBXTextBookmark */ = 0859FC6308579FB8003114E3 /* PBXTextBookmark */;
+			0859FC6708579FB8003114E3 /* PBXTextBookmark */ = 0859FC6708579FB8003114E3 /* PBXTextBookmark */;
+			0859FC6808579FB8003114E3 /* PBXTextBookmark */ = 0859FC6808579FB8003114E3 /* PBXTextBookmark */;
+			0859FC6908579FB8003114E3 /* PBXTextBookmark */ = 0859FC6908579FB8003114E3 /* PBXTextBookmark */;
+			0859FC6B08579FB8003114E3 /* PBXTextBookmark */ = 0859FC6B08579FB8003114E3 /* PBXTextBookmark */;
+			0859FC6D08579FB8003114E3 /* PBXTextBookmark */ = 0859FC6D08579FB8003114E3 /* PBXTextBookmark */;
+			0859FC7308579FB8003114E3 /* PBXTextBookmark */ = 0859FC7308579FB8003114E3 /* PBXTextBookmark */;
+			0859FC8F0857A240003114E3 /* PBXTextBookmark */ = 0859FC8F0857A240003114E3 /* PBXTextBookmark */;
+			0859FC900857A240003114E3 /* PBXTextBookmark */ = 0859FC900857A240003114E3 /* PBXTextBookmark */;
+			0859FC910857A240003114E3 /* PBXTextBookmark */ = 0859FC910857A240003114E3 /* PBXTextBookmark */;
+			0859FC970857A240003114E3 /* PBXTextBookmark */ = 0859FC970857A240003114E3 /* PBXTextBookmark */;
+			0859FC980857A240003114E3 /* PBXTextBookmark */ = 0859FC980857A240003114E3 /* PBXTextBookmark */;
+			0859FC990857A240003114E3 /* PBXTextBookmark */ = 0859FC990857A240003114E3 /* PBXTextBookmark */;
+			0859FC9B0857A240003114E3 /* PBXTextBookmark */ = 0859FC9B0857A240003114E3 /* PBXTextBookmark */;
+			0859FC9D0857A240003114E3 /* PBXTextBookmark */ = 0859FC9D0857A240003114E3 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 085E77C50854B8F600A743C6 /* Source Control */;
+		userBookmarkGroup = 0859FB1408563EE5003114E3 /* PBXBookmarkGroup */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {506, 1932}}";
+			sepNavSelRange = "{3127, 0}";
+			sepNavVisRect = "{{0, 1594}, {459, 186}}";
+			sepNavWindowFrame = "{{15, 68}, {823, 929}}";
+		};
+	};
+	8DD76F620486A84900D96B5E /* avaspec */ = {
+		activeExec = 0;
+		executables = (
+			085E77BE0854B8EE00A743C6 /* avaspec */,
+		);
+	};
+}
