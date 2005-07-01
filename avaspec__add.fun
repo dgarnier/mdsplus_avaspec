@@ -4,10 +4,10 @@ public fun avaspec__add(in _path, out _nidout)
   DevAddNode(_path//':COMMENT','TEXT',*,*,_nid);
   DevAddNode(_path//':MODEL','TEXT',"Dragon Fly",*,_nid);
   DevAddNode(_path//':MAX_FRAMES', 'NUMERIC', 60, '/noshot_write', _nid);
-  DevAddNode(_path//':SPECTROMETER_NO', 'NUMERIC', 1, '/noshot_write', _nid);
+  DevAddNode(_path//':SPECTROMETER_NO', 'NUMERIC', 0, '/noshot_write', _nid);
   DevAddNode(_path//':INTEGRATION', 'NUMERIC', 0.200, '/noshot_write', _nid);
   DevAddNode(_path//':AVERAGE', 'NUMERIC', 1, '/noshot_write', _nid);
-  DevAddNode(_path//':SPECTRA', 'NUMERIC', 1, '/noshot_write', _nid);
+  DevAddNode(_path//':MAX_SPECTRA', 'NUMERIC', 2000, '/noshot_write', _nid);
   DevAddNode(_path//':TRIGGERS', 'NUMERIC', 0:10:1, '/noshot_write', _nid);
   DevAddNode(_path//':EXT_TRIG_MODE', 'NUMERIC', 1  , '/noshot_write', _nid);  /* TRIG_MODE_0 */
   DevAddNode(_path//':ISO_SPEED', 'NUMERIC', 100, '/noshot_write', _nid); /* 100, 200, 400 */

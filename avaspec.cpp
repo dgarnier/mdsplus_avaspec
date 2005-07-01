@@ -239,6 +239,113 @@ void avaspec::start_read ()
   m_saved_integration_time = m_integration_time;
 }
 
+//unsigned avaspec::send_get_first_chan(void)
+//{
+//    std::string command();
+//    for (unsigned channel = 0; channel < m_channel.size (); ++channel)
+//    {
+//        if (m_channel[channel].get_range_max ()
+//            <= m_channel[channel].get_range_min () ) continue;
+//        command[1] = channel & 0xff;
+//        m_hardware->write_message(command);
+//        return first_chan;
+//    }
+//}
+//                                     
+//bool avaspec::check_read(unsigned timeout, unsigned first)
+//{
+//    // read message (timeout_ms,replylen,reply)
+//    std::string data = m_hardware->read_message(timeout,0,0x83);
+//    if (data.size()==0) return false;
+//    
+//    m_channel[first].new_data(data);
+//    
+//    for (unsigned channel=first+1; channel < m_channel.size(); ++channel) {
+//        if (m_channel[channel].get_range_max ()
+//            <= m_channel[channel].get_range_min () ) continue;
+//        command = std::string("\004\000",2);
+//        data = l_readwrite(command, 0x83, 0, 0);
+//        m_channel[first].new_data(data);
+//    }
+//    return true;
+//}
+//
+bool avaspec::run_read_async(void)
+{
+    std::string command;
+    std::string data;
+    unsigned channel;
+    
+    for (channel = 0; channel < m_channel.size (); ++channel) {
+        if (m_channel[channel].get_range_max ()
+                <= m_channel[channel].get_range_min () ) continue;
+            command[1] = channel & 0xff;
+            m_hardware->write_message(command);
+            break ;
+    }
+
+    do {
+        // read message (timeout_ms,replylen,reply)
+        data = m_hardware->read_message(20,0,0x83);
+    } while ((data.size()==0)&&(m_cancel_read==false));
+    
+    if (data.size()==0) return false;
+    
+    m_channel[channel].new_data(data);
+    
+    for (++channel; channel < m_channel.size(); ++channel) {
+        if (m_channel[channel].get_range_max ()
+            <= m_channel[channel].get_range_min () ) continue;
+        command = std::string("\004\000",2);
+        data = l_readwrite(command, 0x83, 0, 0);
+        m_channel[channel].new_data(data);
+    }
+    return true;
+}
+
+
+
+static void * async_read_thread_wrapper(void * p)
+{
+    static bool complete;
+    avaspec *s;
+    
+    s = reinterpret_cast<avaspec *>( p );
+    
+    complete = s->run_read_async();
+    
+    return reinterpret_cast<void *>( &complete );
+}
+
+void avaspec::end_read_async()
+{
+    int err;
+    
+    m_cancel_read = false;
+    
+    
+    if (err = pthread_create(&m_thread,NULL,
+                             async_read_thread_wrapper,
+                             reinterpret_cast<void *>(this))) {
+        m_thread = NULL;
+    }
+}
+
+bool avaspec::cancel_read_async()
+{
+    bool *result_p;
+    
+    if (m_thread == NULL) return false;
+    
+    m_cancel_read = true;
+    
+    pthread_join(m_thread, reinterpret_cast<void **>(&result_p));
+    
+    m_thread = NULL;
+    
+    return *result_p;
+}
+
 void avaspec::end_read ()
 {
   startfunc;
@@ -756,7 +863,7 @@ std::string avaspec::usb::read_message (unsigned timeout, unsigned, char)
   int l = usb_bulk_read (m_handle, m_in_ep, buffer, sizeof (buffer), timeout);
   if (l <= 0)
     {
-      shevek_error ("unable to read from usb device: " << usb_strerror());
+//      shevek_error ("unable to read from usb device: " << usb_strerror());
       return std::string ();
     }
   return std::string (buffer, l);

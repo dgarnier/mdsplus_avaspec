@@ -26,6 +26,7 @@
 #include <vector>
 #include "time.hpp"
 #include <usb.h>
+#include <pthread.h>
 
 class avaspec
 {
@@ -55,6 +56,9 @@ public:
   // block until the data is fully received.
   void start_read ();
   void end_read ();
+  void end_read_async();
+  bool cancel_read_async();
+  bool run_read_async(void);
   // write current data to eeprom.  Not advised to do often
   // (although the windows driver does it on every change)
   void write_eeprom (std::string const &password);
@@ -81,6 +85,8 @@ public:
   // get time of measurement (stored by end_read)
   shevek::absolute_time time () const;
   enum { MAX_DIGITAL = 10 };
+protected:
+      bool m_cancel_read;
 private:
   struct
   {
@@ -114,6 +120,7 @@ private:
   bool m_digital[MAX_DIGITAL];
   bool m_external;
   bool m_fixed;
+  pthread_t m_thread;
   unsigned m_strobe;
   std::vector <channel> m_channel;
   // hardware is a virtual class.  usb, serial and emulation inherit from it.
@@ -156,6 +163,7 @@ private:
   // function called by parent to load new data to m_data
   void new_data (std::string const &message);
   friend void avaspec::end_read ();
+  friend bool avaspec::run_read_async();
   // because setup is not done in constructor, objects can be used in a vector
   void setup (avaspec *parent, unsigned id,
 	      std::vector <float> const &ijkvector,
