@@ -13,13 +13,13 @@
 
 int main (int argc, char * const argv[]) {
 
-    void *h;
+    int h;
     size_t nw, ns;
     float *waves;
     short *spectra;
 
     printf("preinit\n");
-    h = Init(0,.2,1,1,1);
+    h = Init(0,.25,1,1,5);
     printf("postinit...\n");
     
     sleep(10);

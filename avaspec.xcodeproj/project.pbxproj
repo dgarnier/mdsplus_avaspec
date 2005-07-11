@@ -27,6 +27,20 @@
 		08B18128087433F000E2F84C /* libusb-0.1.4.4.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 085E77EA0854B9F400A743C6 /* libusb-0.1.4.4.3.dylib */; };
 		08B181630874353600E2F84C /* testlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 08B181620874353600E2F84C /* testlib.c */; };
 		08B181850874397200E2F84C /* libavaspec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B1810B087430E800E2F84C /* libavaspec.dylib */; };
+		08B182850875E5FC00E2F84C /* time.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 085E77CA0854B96C00A743C6 /* time.hpp */; };
+		08B182860875E5FC00E2F84C /* sstr.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 085E77D00854B96C00A743C6 /* sstr.hpp */; };
+		08B182870875E5FC00E2F84C /* gnuplot.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 085E77D10854B96C00A743C6 /* gnuplot.hpp */; };
+		08B182880875E5FC00E2F84C /* time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 085E77CB0854B96C00A743C6 /* time.cpp */; };
+		08B1828B0875E5FC00E2F84C /* error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 085E77CD0854B96C00A743C6 /* error.cpp */; };
+		08B1828C0875E5FC00E2F84C /* avaspec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 085E77D30854B96C00A743C6 /* avaspec.cpp */; };
+		08B1828D0875E5FC00E2F84C /* avaspec.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 085E77D40854B96C00A743C6 /* avaspec.hpp */; };
+		08B1828E0875E5FC00E2F84C /* ieee754.h in Sources */ = {isa = PBXBuildFile; fileRef = 085E77CE0854B96C00A743C6 /* ieee754.h */; };
+		08B1828F0875E5FC00E2F84C /* debug.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 085E77CF0854B96C00A743C6 /* debug.hpp */; };
+		08B182900875E5FC00E2F84C /* error.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 085E77D20854B96C00A743C6 /* error.hpp */; };
+		08B182910875E5FC00E2F84C /* libavaspec.h in Sources */ = {isa = PBXBuildFile; fileRef = 08B180FF08742E1C00E2F84C /* libavaspec.h */; };
+		08B182920875E5FC00E2F84C /* libavaspec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08604C3808710E5C00B6F49D /* libavaspec.cpp */; };
+		08B1829B0875E71700E2F84C /* avaspec_raw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08B1829A0875E71700E2F84C /* avaspec_raw.cpp */; };
+		08B182AB0875E98900E2F84C /* libusb-0.1.4.4.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 085E77EA0854B9F400A743C6 /* libusb-0.1.4.4.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
@@ -58,7 +72,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 08B1810A087430E800E2F84C /* libavaspec */;
+			remoteGlobalIDString = 08B1810A087430E800E2F84C;
 			remoteInfo = libavaspec;
 		};
 /* End PBXContainerItemProxy section */
@@ -107,6 +121,8 @@
 		08B1810B087430E800E2F84C /* libavaspec.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libavaspec.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B181150874319700E2F84C /* libtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = libtest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B181620874353600E2F84C /* testlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testlib.c; sourceTree = "<group>"; };
+		08B182830875E5E000E2F84C /* avaspec_raw */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = avaspec_raw; sourceTree = BUILT_PRODUCTS_DIR; };
+		08B1829A0875E71700E2F84C /* avaspec_raw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = avaspec_raw.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +139,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				08B181850874397200E2F84C /* libavaspec.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08B182810875E5E000E2F84C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B182AB0875E98900E2F84C /* libusb-0.1.4.4.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +174,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				08B1829A0875E71700E2F84C /* avaspec_raw.cpp */,
 				08604C310870CEAA00B6F49D /* avaspec__add.fun */,
 				08604C320870CEAA00B6F49D /* avaspec__init.fun */,
 				08604C330870CEAA00B6F49D /* avaspec__load_image.fun */,
@@ -180,6 +205,7 @@
 				08604C210870CD3400B6F49D /* avaspec */,
 				08B1810B087430E800E2F84C /* libavaspec.dylib */,
 				08B181150874319700E2F84C /* libtest */,
+				08B182830875E5E000E2F84C /* avaspec_raw */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,6 +301,39 @@
 			productReference = 08B181150874319700E2F84C /* libtest */;
 			productType = "com.apple.product-type.tool";
 		};
+		08B182820875E5E000E2F84C /* avaspec_raw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08B182940875E62700E2F84C /* Build configuration list for PBXNativeTarget "avaspec_raw" */;
+			buildPhases = (
+				08B182800875E5E000E2F84C /* Sources */,
+				08B182810875E5E000E2F84C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = avaspec_raw;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = avaspec_raw;
+			productName = avaspec_raw;
+			productReference = 08B182830875E5E000E2F84C /* avaspec_raw */;
+			productType = "com.apple.product-type.tool";
+		};
 		8DD76F620486A84900D96B5E /* avaspec */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08674FF2085615AA00EBB7A9 /* Build configuration list for PBXNativeTarget "avaspec" */;
@@ -321,6 +380,7 @@
 				8DD76F620486A84900D96B5E /* avaspec */,
 				08B1810A087430E800E2F84C /* libavaspec */,
 				08B181140874319700E2F84C /* libtest */,
+				08B182820875E5E000E2F84C /* avaspec_raw */,
 			);
 		};
 /* End PBXProject section */
@@ -342,6 +402,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				08B181630874353600E2F84C /* testlib.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08B182800875E5E000E2F84C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B182850875E5FC00E2F84C /* time.hpp in Sources */,
+				08B182860875E5FC00E2F84C /* sstr.hpp in Sources */,
+				08B182870875E5FC00E2F84C /* gnuplot.hpp in Sources */,
+				08B182880875E5FC00E2F84C /* time.cpp in Sources */,
+				08B1828B0875E5FC00E2F84C /* error.cpp in Sources */,
+				08B1828C0875E5FC00E2F84C /* avaspec.cpp in Sources */,
+				08B1828D0875E5FC00E2F84C /* avaspec.hpp in Sources */,
+				08B1828E0875E5FC00E2F84C /* ieee754.h in Sources */,
+				08B1828F0875E5FC00E2F84C /* debug.hpp in Sources */,
+				08B182900875E5FC00E2F84C /* error.hpp in Sources */,
+				08B182910875E5FC00E2F84C /* libavaspec.h in Sources */,
+				08B182920875E5FC00E2F84C /* libavaspec.cpp in Sources */,
+				08B1829B0875E71700E2F84C /* avaspec_raw.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +522,7 @@
 				GCC_MODEL_TUNING = G3;
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = DYNAMIC;
-				OPTIMIZATION_CFLAGS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -467,7 +547,7 @@
 				GCC_MODEL_TUNING = G3;
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = DYNAMIC;
-				OPTIMIZATION_CFLAGS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -491,7 +571,7 @@
 				GCC_MODEL_TUNING = G3;
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = DYNAMIC;
-				OPTIMIZATION_CFLAGS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -513,7 +593,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = "$(HOME)/bin";
-				OPTIMIZATION_CFLAGS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -535,7 +615,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = "$(HOME)/bin";
-				OPTIMIZATION_CFLAGS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -556,12 +636,77 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = "$(HOME)/bin";
-				OPTIMIZATION_CFLAGS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = libtest;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		08B182950875E62700E2F84C /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = avaspec_raw;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		08B182960875E62700E2F84C /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = avaspec_raw;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Deployment;
+		};
+		08B182970875E62700E2F84C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = avaspec_raw;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -609,6 +754,15 @@
 				08B18118087431E000E2F84C /* Development */,
 				08B18119087431E000E2F84C /* Deployment */,
 				08B1811A087431E000E2F84C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		08B182940875E62700E2F84C /* Build configuration list for PBXNativeTarget "avaspec_raw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08B182950875E62700E2F84C /* Development */,
+				08B182960875E62700E2F84C /* Deployment */,
+				08B182970875E62700E2F84C /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -276,20 +276,26 @@ bool avaspec::run_read_async(void)
     std::string data;
     unsigned channel;
     
+    unsigned time_ms = m_integration_time.total () * 1000
+        + m_integration_time.nanoseconds () / 1000000;
+
+    poll(0,0,time_ms - 10);
+    
     for (channel = 0; channel < m_channel.size (); ++channel) {
         if (m_channel[channel].get_range_max ()
                 <= m_channel[channel].get_range_min () ) continue;
             command[1] = channel & 0xff;
-            m_hardware->write_message(command);
             break ;
     }
+
+    m_hardware->write_message(command);
 
     do {
         // read message (timeout_ms,replylen,reply)
         data = m_hardware->read_message(20,0,0x83);
     } while ((data.size()==0)&&(m_cancel_read==false));
     
-    if (data.size()==0) return false;
+    if (m_cancel_read) return false;
     
     m_channel[channel].new_data(data);
     
