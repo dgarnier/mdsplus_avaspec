@@ -10,8 +10,8 @@
 #if __cplusplus
 extern "C" {
 #endif
-    int Init(int spec, float int_time, int average, 
-                int dynamic_dark, unsigned max_spectra);
+    int Init(int spec, float int_time, char *trig_event, int *triggers,
+	     int average, int dynamic_dark, unsigned max_spectra);
     int    Stop(int spec);
     int    NumChannels(int spec);
     int    NumSpectra(int spec);

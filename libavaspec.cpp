@@ -212,7 +212,7 @@ bool multispec::run_dacq(void)
 
 static std::map< int , multispec * > gSpects;
 
-int Init(int spect, float integration_time, int average, int dynamic_dark, unsigned max_spectra)
+int Init(int spect, float integration_time, char *trig_event, int *triggers, int average, int dynamic_dark, unsigned max_spectra)
 {
     multispec *sp;
     sp = new multispec(spect, integration_time, average, dynamic_dark, max_spectra);
