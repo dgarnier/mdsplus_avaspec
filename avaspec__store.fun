@@ -1,4 +1,4 @@
-public fun dc1394__store(as_is _nid, optional _method)
+public fun avaspec__store(as_is _nid, optional _method)
 {
    _AVASPEC_HEAD = 0;
    _AVASPEC_COMMENT = 1;
@@ -46,9 +46,9 @@ public fun dc1394__store(as_is _nid, optional _method)
   _wlaxis = MAKE_WITH_UNITS((_waves),"Angstrom");
   
   
-  _signal = make_signal(MAKE_WITH_UNITS((_spectra), "Counts"), *, make_range( 0, _width, 1), make_range( 0, _height, 1), MAKE_DIM(MAKE_WINDOW(0, _num_frames-1,  _trigger), _times));
+  _signal = make_signal(MAKE_WITH_UNITS((_spectra), "Counts"), *, make_range( 0, _width, 1), make_range( 0, _height, 1), MAKE_DIM(MAKE_WINDOW(0, _num_frames-1,  _trigger), _taxis));
     
-  _status = TreeShr->TreePutRecord(val(DevHead(_nid) + _DC1394_SPECTRA),xd(_signal),val(0));
+  _status = TreeShr->TreePutRecord(val(DevHead(_nid) + _AVASPEC_CHANNEL_1),xd(_signal),val(0));
   
 
   return(_status);
