@@ -19,8 +19,6 @@
  * file named "COPYING".
  */
 
-//#define DEBUG_STARTFUNC true
-//#define DEBUG_DBG true
 
 #include <iostream>
 #include <fstream>
@@ -31,54 +29,11 @@
 #include <unistd.h>    // close
 #include <termios.h>   // setting up the serial port
 #include <errno.h>     // errno == -EINTR
-#include <ieee754.h>   // float
+#include "ieee754.h"   // float
 #include <sys/poll.h>  // poll
 #include "debug.hpp" // startfunc, dbg
-//#include <shevek/sstr.hh>
 #include "error.hpp"
 
-namespace
-{
-  void dprint (std::string const &data)
-  {
-    startfunc;
-    for (unsigned y = 0; y * 0x10 < data.size (); ++y)
-    {
-      char buf[80];
-      char *p = buf;
-      sprintf (p, "%03x:", y * 0x10);
-      p += 4;
-      for (unsigned x = 0; x < 0x10; ++x)
-	{
-	  if (y * 0x10 + x >= data.size () )
-	    {
-	      sprintf (p, "   ");
-	    }
-	  else
-	    {
-	      sprintf (p, " %02x", data[y * 0x10 + x] & 0xff);
-	    }
-	  p += 3;
-	}
-      sprintf (p, "\t");
-      ++p;
-      for (unsigned x = 0; x < 0x10; ++x)
-	{
-	  if (y * 0x10 + x >= data.size () )
-	    {
-	      sprintf (p, " ");
-	    }
-	  else
-	    {
-	      char c = data[y * 0x10 + x];
-	      sprintf (p, "%c", isprint (c) ? c : '.');
-	    }
-	  ++p;
-	}
-      dbg (buf);
-    }
-  }
-}
 
 avaspec::channel &avaspec::operator[] (unsigned idx)
 {
@@ -330,9 +285,9 @@ void avaspec::end_read_async()
     m_cancel_read = false;
     
     
-    if (err = pthread_create(&m_thread,NULL,
+    if ((err = pthread_create(&m_thread,NULL,
                              async_read_thread_wrapper,
-                             reinterpret_cast<void *>(this))) {
+                             reinterpret_cast<void *>(this)))) {
         m_thread = NULL;
     }
 }

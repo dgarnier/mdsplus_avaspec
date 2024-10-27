@@ -25,12 +25,10 @@ using namespace std;
 
 
 int main (int argc, char * const argv[]) {
-    
-    
-    int h;
-    size_t nw, ns;
-    vector< float > waves;
-    short *spectra;
+    // int h;
+    // size_t nw, ns;
+    // vector< float > waves;
+    // short *spectra;
     
     cout<<"Avaspec Raw"<<endl;
     

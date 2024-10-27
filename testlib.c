@@ -10,6 +10,7 @@
 #include "libavaspec.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>  /* sleep */
 
 int main (int argc, char * const argv[]) {
 
@@ -17,9 +18,10 @@ int main (int argc, char * const argv[]) {
     size_t nw, ns;
     float *waves;
     short *spectra;
+    int trigs[5] = {0,0,0,0,0};
 
     printf("preinit\n");
-    h = Init(0,.25,1,1,5);
+    h = Init(0,.25,"trig", trigs, 1, 1, 5);
     printf("postinit...\n");
     
     sleep(10);
