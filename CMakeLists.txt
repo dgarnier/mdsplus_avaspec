@@ -10,8 +10,17 @@ set(CMAKE_CXX_STANDARD 14)
 include(cmake/get_cpm.cmake)
 
 # libusb is on github if not installed
+# this is newer version. This code is OLD
 # https://github.com/libusb/libusb.git
 # https://github.com/libusb/libusb-cmake.git
+
+find_package(PkgConfig)
+pkg_check_modules(LIBUSB libusb<1.0)
+if(LIBUSB_FOUND)
+    add_library(libusb::libusb INTERFACE IMPORTED GLOBAL)
+    target_include_directories(libusb::libusb INTERFACE ${LIBUSB_INCLUDE_DIRS})
+    target_link_libraries(libusb::libusb INTERFACE ${LIBUSB_STATIC_LIBRARIES}) 
+else()
 # creates usb-1.0 target, static library (unless option for shared is set)
 CPMAddPackage(gh:libusb/libusb-cmake@1.0.27-1)
 # CPMAddPackage(gh:libusb/libusb-compat-0.1@0.1.8)
@@ -27,15 +36,20 @@ FetchContent_Declare(
     URL https://github.com/libusb/libusb-compat-0.1/archive/v0.1.8.tar.gz
 )
 FetchContent_MakeAvailable(libusb_compat_fc)
+
 # now its available before the build, but still need to build it
+
+# Get the include directories for the target.
+get_target_property(LIBUSB_INCLUDES usb-1.0 INCLUDE_DIRECTORIES)
+get_target_property(LIBUSB_LIBRARIES usb-1.0 LINK_LIBRARIES)
 ExternalProject_Add(
     libusb_compat
     SOURCE_DIR ${libusb_compat_fc_SOURCE_DIR}
     BINARY_DIR ${libusb_compat_fc_BINARY_DIR}
-    CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=<INSTALL_DIR>
+    CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=<INSTALL_DIR> 
     BUILD_COMMAND ${MAKE_EXECUTABLE} -j
     INSTALL_COMMAND ${MAKE_EXECUTABLE} install
-    TEST_COMMAND ""
+    TEST_COMMAND " "
     BUILD_BYPRODUCTS <INSTALL_DIR>/lib/${CMAKE_STATIC_LIBRARY_PREFIX}usb${CMAKE_STATIC_LIBRARY_SUFFIX}
 )
 ExternalProject_Add_Step(libusb_compat
@@ -46,13 +60,15 @@ ExternalProject_Add_Step(libusb_compat
     DEPENDEES download
 )
 ExternalProject_Get_Property(libusb_compat INSTALL_DIR SOURCE_DIR)
+target_link_libraries(libusb_compat PRIVATE usb-1.0)
 
 set(libusb_compat_LIBRARY ${INSTALL_DIR}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}usb${CMAKE_STATIC_LIBRARY_SUFFIX})
 set(libusb_compat_include_dir ${INSTALL_DIR}/include)
-add_library(libusb_compat::libusb_compat INTERFACE IMPORTED GLOBAL)
-target_include_directories(libusb_compat::libusb_compat INTERFACE "${SOURCE_DIR}/libusb")
-target_link_libraries(libusb_compat::libusb_compat INTERFACE "${libusb_compat_LIBRARY}") # need the quotes to expand list
-add_dependencies(libusb_compat::libusb_compat usb-1.0 libusb_compat)
+add_library(libusb::libusb INTERFACE IMPORTED GLOBAL)
+target_include_directories(libusb::libusb INTERFACE " ${SOURCE_DIR}/libusb ")
+target_link_libraries(libusb::libusb INTERFACE " ${libusb_compat_LIBRARY} ") # need the quotes to expand list
+add_dependencies(libusb::libusb usb-1.0 libusb_compat)
+endif()
 
 # add library
 add_library(avaspec SHARED
@@ -62,8 +78,7 @@ add_library(avaspec SHARED
     time.cpp
     error.cpp
 )
-target_link_libraries(avaspec PRIVATE usb-1.0 libusb_compat::libusb_compat)
-add_dependencies(avaspec libusb_compat usb-1.0)
+target_link_libraries(avaspec PRIVATE libusb::libusb)
 
 # add executables
 add_executable(avaspec_raw avaspec_raw.cpp)
