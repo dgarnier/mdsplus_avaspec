@@ -284,25 +284,22 @@ void avaspec::end_read_async()
     
     m_cancel_read = false;
     
-    
-    if ((err = pthread_create(&m_thread,NULL,
+    m_thread_running = (0 == pthread_create(&m_thread, NULL,
                              async_read_thread_wrapper,
-                             reinterpret_cast<void *>(this)))) {
-        m_thread = NULL;
-    }
+                             reinterpret_cast<void *>(this)));
 }
 
 bool avaspec::cancel_read_async()
 {
     bool *result_p;
     
-    if (m_thread == NULL) return false;
+    if (!m_thread_running) return false;
     
     m_cancel_read = true;
     
     pthread_join(m_thread, reinterpret_cast<void **>(&result_p));
     
-    m_thread = NULL;
+    m_thread_running = false;
     
     return *result_p;
 }
@@ -523,6 +520,7 @@ void avaspec::init (std::string const &config)
     }
   // disable external trigger
   l_readwrite (std::string ("\011\000", 2), 0x89, 1);
+  m_thread_running = false;
 }
 
 avaspec::avaspec (std::string const &config, std::string const &device)

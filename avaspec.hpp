@@ -120,7 +120,8 @@ private:
   bool m_digital[MAX_DIGITAL];
   bool m_external;
   bool m_fixed;
-  pthread_t m_thread;
+  pthread_t m_thread; // don't use arithmetic on this
+  bool m_thread_running;
   unsigned m_strobe;
   std::vector <channel> m_channel;
   // hardware is a virtual class.  usb, serial and emulation inherit from it.

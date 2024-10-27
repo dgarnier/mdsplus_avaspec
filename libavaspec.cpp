@@ -28,6 +28,7 @@ public:
     bool      m_cancelled;
     unsigned int m_max_spectra;
     pthread_t m_dacq_thread;
+    bool      m_dacq_thread_running;
         
     std::vector< short > m_dark;
     
@@ -117,7 +118,9 @@ multispec::multispec(int skip, float integration_time, int average, int dynamic_
     avaspec::channel *cp = &(*this)[0];
     cp->set_range (cp->get_range_min (), cp->get_range_max ());
     
-    pthread_create(&m_dacq_thread,NULL,StartDacqThread,reinterpret_cast<void *>(this));
+    if (0 == pthread_create(&m_dacq_thread,NULL,StartDacqThread,reinterpret_cast<void *>(this))) {
+        m_dacq_thread_running = true;
+    }
 }
 
 multispec::multispec(int skip, float integration_time, int average, int dynamic_dark, 
@@ -149,22 +152,23 @@ avaspec("",kProduct,kVendor,skip)
 
 multispec::~multispec(void)
 {
-    if (m_dacq_thread != NULL) {
+    if (m_dacq_thread_running) {
         void *result;
         pthread_cancel(m_dacq_thread);
         pthread_join(m_dacq_thread, &result);
+        m_dacq_thread_running = false;
     }
 }
 
 bool multispec::stop_dacq(void)
 {
     void * result;
-    if (m_dacq_thread == NULL) return false; 
+    if (!m_dacq_thread_running) return false;
     m_cancel_read = true;
     
-    pthread_join(m_dacq_thread,&result);
+    pthread_join(m_dacq_thread, &result);
     
-    m_dacq_thread=NULL;
+    m_dacq_thread_running = false;
     
     return !m_cancelled;
 }
