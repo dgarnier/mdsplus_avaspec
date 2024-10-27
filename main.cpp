@@ -53,6 +53,7 @@ int main (int argc, char * const argv[]) {
 	
 	string theConfig = "";
 	
+	
 	//usb_set_debug(1);
 
 	try {
@@ -91,8 +92,13 @@ int main (int argc, char * const argv[]) {
 			
 			// change the settings
 			
-			relative_time int_time(0,50000000);  // 1 second, 0 nanosec
-			
+			relative_time int_time(1,00000000); // 1 second, 0 nanosec
+
+			if (argc > 1) {
+			  int_time *= atof(argv[1]);
+			}
+
+
 			s.set_integration_time(int_time);
 			s.set_average(1); // don't average spectra...
 			
@@ -160,6 +166,13 @@ int main (int argc, char * const argv[]) {
 		g.plot_xy("Corrected",xx,diff);
 //		std::string s;
 //		g.plot_xy("Corrected",diff,s);
+		g.cmd("set terminal postscript eps color");
+		g.cmd("set out 'test.eps'");
+		g.cmd("replot");
+		g.cmd("set term pop");
+		
+		
+		for (unsigned i=0; i<xx.size(); i++) cout<<xx[i]<<", "<<y1[i]<<", "<<diff[i]<<endl;
 		
 		return 0;
 	}

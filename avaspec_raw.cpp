@@ -3,16 +3,6 @@
  *  avaspec
  *
  *  Created by Darren Garnier on 7/1/05.
- *  Copyright 2005 __MyCompanyName__. All rights reserved.
- *
- */
-
-/*
- *  testlib.c
- *  avaspec
- *
- *  Created by Darren Garnier on 6/30/05.
- *  Copyright 2005 __MyCompanyName__. All rights reserved.
  *
  */
 
@@ -23,15 +13,27 @@
 
 using namespace std;
 
+int main(int argc, char *const argv[])
+{
 
-int main (int argc, char * const argv[]) {
-    // int h;
-    // size_t nw, ns;
-    // vector< float > waves;
-    // short *spectra;
-    
-    cout<<"Avaspec Raw"<<endl;
-    
-    RunRaw(.25,1,1,50);
+    int h;
+    size_t nw, ns;
+    vector<float> waves;
+    short *spectra;
+    float int_time = .25;
+    long num_spec = 50;
+
+    cout << "Avaspec Raw" << endl;
+
+    if (argc >= 2)
+        int_time = atof(argv[1]);
+
+    if (argc >= 3)
+        num_spec = atoi(argv[2]);
+
+    cout << "Integration time = " << int_time << endl;
+    cout << "Num spectra = " << num_spec << endl;
+
+    RunRaw(int_time, 1, 1, num_spec);
     return 0;
 }
